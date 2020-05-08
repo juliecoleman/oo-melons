@@ -53,3 +53,24 @@ class InternationalMelonOrder(AbstractMelonOrder):
         """Return the country code."""
 
         return self.country_code
+
+class GovernmentMelonOrder(AbstractMelonOrder):
+    """A US Government melon order."""
+
+    def __init__(self, species, qty):
+
+        super().__init__(species, qty, "government", 0)
+        self.passed_inspection = False
+
+    def mark_inspection(self, passed):
+        """Return if melon passed inspection"""
+
+        if passed == True:
+            self.passed_inspection = True
+        #self.passed_inspection = passed
+        return self.passed_inspection
+
+        #Or could have just been self.passed_inspection = passed
+
+
+    
