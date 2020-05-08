@@ -72,5 +72,9 @@ class GovernmentMelonOrder(AbstractMelonOrder):
 
         #Or could have just been self.passed_inspection = passed
 
+if __name__ == "__main__":
+    
+    order1 = GovernmentMelonOrder("honeydew", 7)
+
 
     
